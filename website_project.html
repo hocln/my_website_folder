@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="website_project.js">
+    <link rel='style_sheet' href="website_project.css">
+    <title>Document</title>
+</head>
+<body>
+    <img id='my_image' src="https://static01.nyt.com/images/2022/11/19/arts/18donkey-film-tako2/18donkey-EO4-superJumbo.jpg?quality=75&auto=webp" style="width:500px;height: auto;" alt="donkey">
+    <style>
+        button {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #my_image {
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function change_pic() {
+            var image= document.getElementById('my_image');
+            if(image.src.match('https://static01.nyt.com/images/2022/11/19/arts/18donkey-film-tako2/18donkey-EO4-superJumbo.jpg?quality=75&auto=webp')) {//donkey
+                image.src = 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg.webp';//dog
+                image.alt='dog';
+            }
+            else if(image.src.match('https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg.webp')) {
+                image='https://www.boredpanda.com/blog/wp-content/uploads/2022/07/Cat-Virus-Exe-Funny-Pics-123-62c2f23a1a130__700.jpg';//cat
+                image.alt='cat';
+            }
+            else {
+                image.src='https://static01.nyt.com/images/2022/11/19/arts/18donkey-film-tako2/18donkey-EO4-superJumbo.jpg?quality=75&auto=webp';
+                image.alt='donkey';
+            } 
+        }
+        function basheer_pic() {
+            var image = document.getElementById('my_image');
+            image.src='https://static01.nyt.com/images/2022/11/19/arts/18donkey-film-tako2/18donkey-EO4-superJumbo.jpg?quality=75&auto=webp';
+        }
+        function bader_pic() {
+            var image = document.getElementById('my_image');
+            image.src='https://www.boredpanda.com/blog/wp-content/uploads/2022/07/Cat-Virus-Exe-Funny-Pics-123-62c2f23a1a130__700.jpg';
+        }
+        function karem_pic() {
+            var image = document.getElementById('my_image');
+            image.src='https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg.webp';
+        }
+    </script>
+    <h1 id="name_of_mode"></h1>
+    <button class="basheer_button" onclick="basheer_pic()"> Basheer Mode </button>
+    <button class="bader_button" onclick="bader_pic()">Bader Mode</button>
+    <button class="karem_button" onclick="karem_pic()">Karem mode</button>
+</body>
+</html>
